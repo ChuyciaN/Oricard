@@ -1,0 +1,227 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Oricard YGO</title>
+<body background="/images/wpmagician2.jpg">
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Payment Method form  Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Exo:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700' rel='stylesheet' type='text/css'><link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!--web-fonts-->
+</head>
+<body>
+		<!---header--->
+		<div class="header">
+			<h1>Oricard YGO!</h1>
+		</div>
+		<!---header--->
+		
+	<body background="/images/wpmagician2.jpg">
+		<!---main--->
+			<div class="main">
+				<div class="main-section">
+					<div class="payment-left">
+						<div class="payment-top">
+							<div class="price">
+								<div class="price-left">
+									
+									<h3>Orica Card</h3>
+								</div>
+								
+							</div>
+							
+							<div class="price">
+								
+								<?php
+
+								// Esto evaluará a TRUE así que el texto se imprimirá.
+									if (isset( $_POST['cardtype'])) {
+									   include 'realiza.php';
+										//echo "Esta variable está definida, así que se imprimirá";
+										
+										echo '<a><img style="width:333px" id="card" src="img/Yu-Gi-Ho.png" alt="Yu-Gi-Oh Card" ></a>';
+										
+									}else {
+										
+											echo '<th rowspan="2" style="padding:2px;text-align:right;vertical-align:top;width:333px;" class="row2">
+											<a><img style="width:333px" id="card" src="plantillas/typecard/Normal.jpg" alt="Yu-Gi-Oh Card" ></a>
+								
+											 <div id="isurl"></div>
+											</th>';
+										
+									
+									}
+								
+								// En los siguientes ejemplo usaremos var_dump para imprimir
+								// el valor devuelto por isset().
+								
+								
+								?>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+					
+					
+					<div class="payment-right">
+						
+					
+						<form action="index.php" method="post" enctype="multipart/form-data">
+						
+													
+								<table border="0" cellspacing="0" cellpadding="2" style="width:50%;">
+								
+								
+								<tr class="row1">
+								
+								</tr>
+								
+								<tr class="row2">
+								  <td>Card Type:</td> 
+								  <td>
+									<select name="cardtype" >
+										<option value="Normal">Monster Normal</option>
+										<option value="Effect">Monster Effect</option>
+										<option value="Ritual">Monster Ritual</option>
+										<option value="Fusion">Monster Fusion</option>
+										<option value="Synchro">Monster Synchro</option>
+										<option value="Xyz">Monster Xyz</option>
+										<option value="Pendulum_Normal">Monster Pendulum Normal</option>
+										<option value="Pendulum_Effect">Monster Pendulum Effect</option>
+										<option value="Token">Token</option>
+										<option value="Spell">Spell</option>
+										<option value="Trap">Trap</option>
+									</select>
+									
+								  </td>
+								</tr>
+								
+								<tr class="row1">
+								  <td>Attribute:</td>
+								  <td>
+									<select name="attribute" id="attribute">
+										<option value="Light1">Light</option>
+										<option value="Dark1">Dark</option>
+										<option value="Fire1">Fire</option>
+										<option value="Water1">Water</option>
+										<option value="Wind1">Wind</option>
+										<option value="Earth1">Earth</option>
+										<option value="Divine1">Divine</option>
+									</select>
+								  </td>
+								</tr>
+								
+								<tr class="row2">
+								  <td>Level/Rank:</td>
+								  <td>
+									<select name="level">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="0">0</option>
+									</select>
+								  </td>
+								</tr>
+								
+								
+								
+								
+								<tr class="row2">
+								  <td>ATK / DEF:</td>
+								  <td>
+									<input type="text" class="input_text" name="atk" id="atk" size="4" maxlength="4"> /
+									<input type="text" class="input_text" name="def" id="def" size="4" maxlength="4">
+								  </td>
+								</tr>
+								
+								<tr class="row2">
+								  <td>Pendulum Scale:</td>
+								  <td> <img src="imagenes/Left_Pendulum_Scale.png"  width="28" height="21" alt="Tamaño original"/>
+									<select name="Der">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									   </select> |
+									<img src="imagenes/Rigth_Pendulum_Scale.jpg" width="28" height="21" alt="Tamaño original"/>
+									<select name="Izq">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									   </select>
+									
+								  </td>
+								</tr>
+								
+								<tr class="row1">
+								  <td>Picture URL:</td>
+								  <td>
+									<input type="hidden" name="MAX_FILE_SIZE" value="200000000" />
+									<input type="file" name="imagen" id="imagen" />
+									</td>
+								</tr>
+								
+								</tbody>
+								
+								</table>
+								
+						</div>
+													<div class="clear"></div>
+													<div class="send">
+													<span><input type="submit" value="generate" style="font-size:16px;min-width:0px"></span>
+														
+														
+													</div>
+
+
+						</form>
+						
+				</div>
+			</div>
+			<div class="footer">
+			<p>&copy 2016 ChuyiciaN. All rights reserved | 
+		</div>
+
+
+
+
+		<!---main--->
+</body>
+</html>
